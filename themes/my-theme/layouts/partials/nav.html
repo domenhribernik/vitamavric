@@ -1,0 +1,20 @@
+<header>
+  <nav>
+    <img src="/logo.png" alt="Logo">
+    <ul>
+      <li><a href="/">Domov</a></li>
+      {{ $pages := .Site.RegularPages.Reverse }}
+      {{ range $pages }}
+        <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+      {{ end }}
+    </ul>
+    <ul>
+      <li><a href="https://www.facebook.com/officialVitaMavric "><i class="fa-brands fa-facebook"></i></a>
+      </li>
+      <li><a href="https://www.youtube.com/channel/UC6r9yJ6wtpQuBDGGFwaDmuA "><i class="fa-brands fa-youtube"></i></a>
+      </li>
+      <li><a href="https://www.instagram.com/the_official_vita_mavric/ "><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://linktr.ee/vitamavric "><img class="linktree" src="/linktree.jpg" alt="linktree"></a></li>
+    </ul>
+  </nav>
+</header>

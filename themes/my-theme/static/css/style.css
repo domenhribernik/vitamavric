@@ -1,0 +1,1004 @@
+/* GENERAL */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #4B0811;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+}
+
+.space {
+    margin-top: 10rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+}
+
+.video {
+    width: 70%;
+    margin: 30px auto;
+}
+
+video, iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.content>video {
+    width: 70%;
+    margin: 0px 15%;
+}
+
+.cover-photo {
+    width: 50% !important;
+    display: block;
+    margin: 0 auto;
+}
+
+label.avtor {
+    text-align: center;
+    color: #888;
+    display: block;
+}
+
+embed {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.articles ul {
+    display: inline-block;
+    position: relative;
+    left: 30%;
+    margin-bottom: 100px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.articles a {
+    color: white;
+}
+
+.container {
+    margin-bottom: 100px;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    position: fixed;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.side-img {
+    display: grid;
+    grid-template-columns: auto 35%;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: auto;
+}
+
+/* HEADER */
+
+header {
+    background-color: rgba(33, 33, 33, 0.7);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+nav img {
+    height: 2.3rem;
+    margin-top: 5px;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-content {
+    display: grid;
+    width: 70%;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.linktree {
+    position: relative;
+    height: 1rem;
+    top: 1px;
+}
+
+.nav .icon {
+    display: none;
+    font-size: 1.5rem;
+    padding-top: 5px;
+}
+
+
+@media (max-width: 1100px) {
+    .video {
+        width: 90%;
+    }
+
+    .articles ul {
+        left: 20%;
+    }
+
+    nav {
+        font-size: 0.9rem;
+    }
+
+    nav img {
+        height: 2rem;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        font-size: 0.8rem;
+    }
+    .content>video {
+        width: 90%;
+        margin: 0px 5%;
+    }
+}
+
+@media (max-width: 800px) {
+    .articles ul {
+        left: 10%;
+    }
+
+    nav {
+        font-size: 1rem;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .nav div {
+        display: inline-block;
+    }
+
+    .nav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .nav.responsive div {
+        position: absolute;
+        right: 20px;
+        height: 330px;
+    }
+
+    .nav.responsive ul {
+        display: block;
+        position: absolute;
+        margin-top: 57px;
+        padding: 0;
+        right: -20px;
+        text-align: right;
+        background: rgba(33, 33, 33, 0.7);
+        width: 250px;
+    }
+
+    .nav.responsive ul:nth-child(3) {
+        bottom: 0;
+        border-top: 1px solid gray;
+        padding-right: 45px;
+    }
+
+    .nav.responsive li {
+        display: block;
+        border-top: 1px solid gray;
+        text-align: center;
+        padding: 10px 5px;
+    }
+
+    .nav.responsive .links li {
+        display: inline-block;
+        border: 0;
+    }
+
+    
+    .cover-photo {
+        width: 70% !important;
+    }
+}
+
+/* HOME PAGE */
+
+.carousel {
+    height: 100vh;
+    position: relative;
+}
+
+.carousel>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    transition-delay: 500ms;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 1ms;
+}
+
+.slide>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide>img,
+.discography img {
+    border-radius: 0px;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+.language-toggle {
+    text-align: center;
+    margin: 20px 20% 0;
+}
+
+.language-toggle>label {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* .language-toggle>label:hover {
+    background-color: #eee;
+} */
+
+/* .language-toggle input[type="radio"]:checked+label {
+    background-color: #007bff;
+    color: #fff;
+} */
+
+.language-toggle input[type="radio"] {
+    display: none;
+}
+
+.english-text,
+.slovenian-text {
+    display: none;
+}
+
+#english:checked~.english-text,
+#slovenian:checked~.slovenian-text {
+    display: block;
+}
+
+blockquote {
+    padding: 20px 80px;
+    margin: 20px;
+    font-style: italic;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+blockquote::before,
+blockquote::after {
+    font-size: 1.5rem;
+}
+
+/* blockquote::before {
+    content: "❝";
+    font-family: Arial, sans-serif;
+    top: 0;
+    left: 10px;
+    padding-right: 3px;
+}
+
+blockquote::after {
+    content: "❠";
+    font-family: Arial, sans-serif;
+    bottom: 0;
+    right: 10px;
+    padding-left: 3px;
+} */
+
+.discography {
+    text-align: center;
+    margin: 20px 0 50px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    gap: 10px;
+    width: calc(5 * 260px + 4 * 10px);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.images img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    transition: transform linear 200ms;
+}
+
+.images img:hover {
+    transform: scale(1.3);
+    transition: transform linear 200ms;
+    z-index: 2;
+}
+
+@media (max-width: 1500px) {
+    .images {
+        width: calc(5 * 200px + 4 * 10px);
+    }
+
+    .images img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .images {
+        width: calc(3 * 200px + 2 * 10px);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    blockquote {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .language-toggle {
+        margin: 20px 10% 0;
+    }
+
+    .language-toggle div p {
+        text-align: start;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 60vh;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .images {
+        width: calc(2 * 150px + 10px);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .images img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel {
+        height: 40vh;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+/* O MENI */
+
+.chronology {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chronology li {
+    position: relative;
+    margin-bottom: 10px;
+    border-left: 3px solid #ccc;
+    text-align: start;
+    padding: 25px;
+    padding-top: 10px;
+}
+
+.chronology li::before {
+    content: attr(data-year);
+    position: absolute;
+    top: 0;
+    left: -55px;
+    font-family: Arial, sans-serif;
+}
+
+.images-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 3rem;
+    margin: 20px 0;
+    align-items: center;
+    justify-items: center;
+    align-items: start;
+}
+
+.images-section img {
+    width: 100%;
+    height: auto;
+}
+
+.language-toggle img {
+    width: 60%;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .language-toggle img {
+        width: 80%;
+    }
+
+    .chronology li {
+        margin-left: 30px;
+    }
+}
+
+/* REPERTOAR */
+
+.repertoar-list ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10px;
+}
+
+.repertoar-list li {
+    background-color: rgba(95, 95, 95, 0.7);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas:
+        "image title";
+    align-items: center;
+    width: 500px;
+}
+
+.repertoar-list li img {
+    grid-area: image;
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+.repertoar-list li .info {
+    color: #fff;
+}
+
+.repertoar-list li a {
+    grid-area: title;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: block;
+    text-decoration: underline;
+}
+
+.kontra-alba,
+.nokturno-zlahtnih-dus,
+.sprehod,
+.vitomil-zupan,
+.klezmer,
+.brecht,
+.nepozabne {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.kontra-alba video, .kontra-alba iframe,
+.sprehod video {
+    margin: 25px 0px 40px;
+}
+
+.nokturno-zlahtnih-dus,
+.sprehod,
+.vitomil-zupan {
+    text-align: center;
+}
+
+.nokturno-zlahtnih-dus .program {
+    margin-bottom: 60px;
+}
+
+.nokturno-zlahtnih-dus p {
+    line-height: 0.7rem;
+}
+
+.nokturno-zlahtnih-dus h2,
+.sprehod h2,
+.vitomil-zupan h2,
+.brecht h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+
+.nokturno-zlahtnih-dus img {
+    width: 80%;
+}
+
+.nokturno-zlahtnih-dus strong {
+    line-height: 2rem;
+}
+
+.nokturno-zlahtnih-dus .content {
+    margin: 30px 0 50px;
+}
+
+.nokturno-zlahtnih-dus .content p {
+    line-height: 1.7rem;
+    text-align: start;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 70vw;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+    background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+    left: -22px;
+    display: none;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .slider {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.slider.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.slider.dragging img {
+    pointer-events: none;
+}
+
+.slider img {
+    display: inline-block;
+    height: 400px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    /* width: calc(100% / 3); */
+    width: auto
+}
+
+.slider img:first-child {
+    margin-left: 0px;
+}
+
+.sprehod .articles {
+    text-align: left;
+}
+
+.vitomil-zupan .long {
+    text-align: start;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.vitomil-zupan img {
+    width: 40%;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.brecht img {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.klezmer .list {
+    line-height: 1rem;
+}
+
+.brecht h2 {
+    text-align: center;
+    line-height: 1rem;
+}
+
+.klezmer img {
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.klezmer .small-img {
+    width: 30%;
+    height: auto;
+}
+
+.naslovna {
+    width: 40%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1200px) {
+    .repertoar-list ol {
+        grid-template-columns: auto;
+    }
+
+    .wrapper {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .kontra-alba,
+    .nokturno-zlahtnih-dus,
+    .sprehod,
+    .vitomil-zupan,
+    .klezmer,
+    .brecht {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .nokturno-zlahtnih-dus p {
+        line-height: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .slider img {
+        height: 300px;
+    }
+
+    .vitomil-zupan img {
+        width: 50%;
+    }
+
+    .side-img {
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .brecht img {
+        width: 50%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .repertoar-list li {
+        width: 350px;
+    }
+
+    .repertoar-list li img {
+        width: 160px;
+        height: 140px;
+        border-radius: 5px;
+    }
+
+    .repertoar-list li a {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .images-section {
+        grid-template-columns: auto;
+    }
+
+    .brecht img {
+        width: 80%;
+    }
+
+    .brecht h2 {
+        line-height: 3rem;
+    }
+
+    .klezmer .small-img {
+        width: 50%
+    }
+
+    .naslovna {
+        width: 60%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .repertoar-list li {
+        width: 290px;
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .repertoar-list li img {
+        width: 120px;
+        height: 100px;
+        border-radius: 5px;
+    }
+
+    .slider img {
+        height: 200px;
+    }
+
+    .vitomil-zupan img {
+        width: 80%;
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* CAFE TEATER & LA VIE EN ROSE */
+
+.logos {
+    display: grid;
+    margin: 10rem auto 0;
+    width: 70vw;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.logos img {
+    width: 50%;
+}
+
+.cafe-teater {
+    width: 70vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cafe-teater img {
+    width: 35%;
+    padding: 20px;
+}
+
+/* KONTAKT PAGE */
+
+.kontakt {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.item {
+    margin: 10px;
+    padding: 0 0 30px;
+    width: 30%;
+    min-width: 300px;
+    height: 50%;
+    border: 1px solid gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background: #444;
+}
+
+.kontakt img {
+    width: 300px;
+    padding-left: 15px;
+}
+
+.kontakt img,
+.item {
+    display: inline-block;
+}
+
+.kontakt .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.item a {
+    color: lightskyblue;
+}
+
+.item h2 {
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .logos img {
+        width: 70%;
+    }
+
+    .cafe-teater,
+    .logos {
+        width: 85vw;
+    }
+
+    .cafe-teater img {
+        width: 60%;
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .kontakt .content {
+        display: inline-block;
+        margin: auto 20%;
+    }
+
+    .kontakt img {
+        margin-bottom: 70px;
+    }
+
+    .item {
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cafe-teater img {
+        width: 80%;
+    }
+
+    .articles ul {
+        left: 0;
+    }
+}

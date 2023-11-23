@@ -1,0 +1,9 @@
+{{ with .Page.Params.images }}
+  <div class="discography">
+    <div class="images">
+      {{ range $index, $image := . }}
+        <img src="{{ $image }}" alt="Album {{ add $index 1 }}">
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
