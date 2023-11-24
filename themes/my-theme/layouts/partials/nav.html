@@ -1,20 +1,25 @@
 <header>
-  <nav>
+  <nav class="nav" id="nav">
     <img src="/logo.png" alt="Logo">
-    <ul>
-      <li><a href="/">Domov</a></li>
-      {{ $pages := .Site.RegularPages.Reverse }}
-      {{ range $pages }}
-        <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-      {{ end }}
-    </ul>
-    <ul>
-      <li><a href="https://www.facebook.com/officialVitaMavric "><i class="fa-brands fa-facebook"></i></a>
-      </li>
-      <li><a href="https://www.youtube.com/channel/UC6r9yJ6wtpQuBDGGFwaDmuA "><i class="fa-brands fa-youtube"></i></a>
-      </li>
-      <li><a href="https://www.instagram.com/the_official_vita_mavric/ "><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href="https://linktr.ee/vitamavric "><img class="linktree" src="/linktree.jpg" alt="linktree"></a></li>
-    </ul>
+    <div class="nav-content">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+      </a>
+      <ul>
+        <li><a href="/">Domov</a></li>
+        {{ $pages := .Site.RegularPages.Reverse }}
+        {{ range $pages }}
+          <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+        {{ end }}
+      </ul>
+      <ul class="links">
+        <li><a href="https://www.facebook.com/officialVitaMavric" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li><a href="https://www.youtube.com/channel/UC6r9yJ6wtpQuBDGGFwaDmuA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+        <li><a href="https://www.instagram.com/the_official_vita_mavric/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://linktr.ee/vitamavric" target="_blank"><img class="linktree" src="/linktree.jpg" alt="linktree"></a></li>
+      </ul>
+    </div>
   </nav>
 </header>

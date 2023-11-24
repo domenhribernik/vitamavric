@@ -81,6 +81,7 @@ document.addEventListener("mouseup", dragStop);
 slider.addEventListener("touchend", dragStop);
 
 function myFunction() {
+    console.log("this is happening");
     var x = document.getElementById("nav");
     if (x.className === "nav") {
       x.className += " responsive";

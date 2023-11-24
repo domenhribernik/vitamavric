@@ -899,8 +899,8 @@ blockquote::after {
     place-items: center;
 }
 
-.logos img {
-    width: 50%;
+.cafe-teater .logos img {
+    width: 60%;
 }
 
 .cafe-teater {

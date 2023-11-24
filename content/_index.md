@@ -13,6 +13,7 @@ images:
   - 'albumi/Album 8.jpg'
   - 'albumi/Album 9 crop.jpg'
 video: 'naslovna-stran/naslovni-video.mp4'
+poster: 'video-poster/homepage.jpg'
 ---
 
 {{< caraousel >}}

@@ -1,9 +1,5 @@
 {{- $Img := (.Get "url") }}
-{{- $height := (.Get "height") }}
 {{- $alt := (.Get "alt") }}
 {{- $align := (.Get "align") }}
 
-<img height="{{ $height | default `15` }}" 
-     src="{{$Img}}" 
-     alt="{{$alt}}" 
-     {{ with $align }} align="{{ $align }}" {{ end }} >
+<img src="{{$Img}}" alt="{{$alt}}" {{ with $align }} align="{{ $align }}" {{ end }}>

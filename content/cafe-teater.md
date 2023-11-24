@@ -4,6 +4,7 @@ date: 2023-10-10T16:50:38+02:00
 draft: false
 class: 'cafe-teater'
 video: '/cafe-teater-la-vie-en-rose/Cafe teater & La vie en rose.mp4'
+poster: '/video-poster/cafe-teater.jpg'
 ---
 
 {{< logos >}}
