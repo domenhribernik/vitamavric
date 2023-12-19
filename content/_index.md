@@ -1,7 +1,5 @@
 ---
 title: 'Home'
-date: 2023-10-10T17:09:42+02:00
-draft: false
 images:
   - 'albumi/Album 1.jpg'
   - 'albumi/Album 2.jpg'
@@ -37,6 +35,7 @@ poster: 'video-poster/homepage.jpg'
 {{< /language-toggle >}}
 
 # Diskografija
+
 {{< discography >}}
 
 {{< video>}}

@@ -1,8 +1,7 @@
 ---
 title: 'O Meni'
 date: 2023-10-10T16:49:19+02:00
-draft: false
-class: 'o-meni'
+class: 'standard'
 ---
 
 # Vita Mavrič

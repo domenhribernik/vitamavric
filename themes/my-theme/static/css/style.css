@@ -16,7 +16,7 @@ body {
     font-size: 1.3rem;
 }
 
-.space {
+.standard {
     margin-top: 10rem;
 }
 
@@ -34,11 +34,6 @@ h1 {
 video, iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
-}
-
-.content>video {
-    width: 70%;
-    margin: 0px 15%;
 }
 
 .cover-photo {
@@ -205,10 +200,6 @@ nav a:hover {
 @media (max-width: 900px) {
     nav {
         font-size: 0.8rem;
-    }
-    .content>video {
-        width: 90%;
-        margin: 0px 5%;
     }
 }
 
@@ -910,9 +901,17 @@ blockquote::after {
     transform: translateX(-50%);
 }
 
+.cafe-teater h1 {
+    font-size: 2.5rem;
+}
+
 .cafe-teater img {
     width: 35%;
-    padding: 20px;
+    margin: 20px;
+}
+
+.cafe-teater .video {
+    width: 100%;
 }
 
 /* KONTAKT PAGE */
@@ -962,7 +961,7 @@ blockquote::after {
 }
 
 @media (max-width: 800px) {
-    .logos img {
+    .cafe-teater .logos img {
         width: 70%;
     }
 

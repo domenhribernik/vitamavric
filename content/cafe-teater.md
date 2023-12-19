@@ -1,7 +1,6 @@
 ---
 title: 'Cafe Teater & La Vie en Rose'
 date: 2023-10-10T16:50:38+02:00
-draft: false
 class: 'cafe-teater'
 video: '/cafe-teater-la-vie-en-rose/Cafe teater & La vie en rose.mp4'
 poster: '/video-poster/cafe-teater.jpg'
@@ -33,4 +32,6 @@ V slovenskem prostoru je Vita unikaten in zelo dragocen gledališki človek, bre
 {{< md-content class="articles" >}}
   # Članki
   - [Delo - intervju ob zadnjem La vie en rose 2015](/cafe-teater-la-vie-en-rose/Delo-intervju-ob-zadnjem-La-vie-en-rose-2015.pdf#toolbar=0)
+  - [Dnevnik - 18.9.2014](/cafe-teater-la-vie-en-rose/Vita-Mavric-Dnevnik-sept-2014.pdf#toolbar=0)
+  - [Portret v oddaji Umetnost igre](https://365.rtvslo.si/arhiv/umetnost-igre/174299156)
 {{< /md-content >}}
